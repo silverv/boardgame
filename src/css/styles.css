@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form * {
+    margin-top: 10px;
+}
+.playButton {
+    padding: 10px 20px;
+}
+@media only screen and (min-width: 1280px) {
+    .form {
+        background-color: #aaa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    .form {
+        background-color: #fea;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
