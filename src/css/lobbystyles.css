@@ -27,6 +27,7 @@ body {
 .container {
     width: 100%;
     display: grid;
+    height: 100%;
     grid-template-areas: "playerlist gamelist" "playerlist chat";
     grid-template-columns: 25vw 75vw;
     grid-template-rows: 50vh 25vh;
@@ -57,7 +58,7 @@ td.closed {
     margin: 3px;
     grid-area: playerlist;
     background-color: #A9927D;
-    overflow: scroll;
+    overflow: auto;
     background-image: url("../img/brown_planks_05_1k_jpg/brown_planks_05_diff_1k.jpg");
     background-position-x: 0px;
 }
@@ -102,7 +103,6 @@ td.closed {
 .container .gamelist {
     
     padding: 10px;
-    overflow: scroll;
     margin: 3px;
     grid-area: gamelist;
     background-color: #5E503F;
@@ -111,7 +111,12 @@ td.closed {
 }
 .container .gamelist,.playerlist,.chat{
     box-shadow: inset 0 0 10px #000000;
-    border: 3px solid black;
+    border: 1px solid black;
+    overflow: auto;
+}
+.gamelist:hover,.playerlist:hover,.chat:hover{
+    border: 1px solid green;
+    box-shadow: inset 0 0 10px green;
 }
 
 .container .playerlist table {
@@ -127,6 +132,7 @@ td.closed {
     display: grid;
     grid-template-areas: "chat-read" "chat-write";
     grid-auto-columns: 100%;
+    overflow: hidden;
     grid-auto-rows: auto 40px;
     background-color: #5E503F;
     background-image: url("../img/brown_planks_03_1k_jpg/brown_planks_03_diff_1k.jpg");
@@ -139,7 +145,7 @@ td.closed {
 .container .chat .chat-read {
     grid-area: chat-read;
     background-color: rgba(255, 255, 255, 0.356);
-    overflow: scroll;
+    overflow: auto;
     margin: 3px;
     padding: 10px;
 }
