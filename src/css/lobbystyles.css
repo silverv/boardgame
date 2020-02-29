@@ -1,28 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 body {
+    font-family: 'Roboto';
     width: 100%;
     height: 100%;
     box-sizing: border-box;
 }
 .container {
     width: 100%;
-    height: 100%;
     display: grid;
     grid-template-areas: "playerlist gamelist" "playerlist chat";
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 50% 25%;
+    grid-template-columns: 25vw 75vw;
+    grid-template-rows: 50vh 25vh;
 
+}
+td.busy {
+    color: red;
+}
+td.online{
+    color: green;
+}
+td.spectatable {
+    color: orange;
+}
+td.open {
+    color: green;
+}
+td.closed {
+    color: red;
 }
 
 .container .playerlist {
+    padding: 10px;
     margin: 3px;
     grid-area: playerlist;
     background-color: #A9927D;
     overflow: scroll;
+    background-image: url("../img/brown_planks_05_1k_jpg/brown_planks_05_diff_1k.jpg");
 }
+.container .playerlist table {
+    width: 100%;
+}
+
 .container .playerlist table,tr,td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 5px;
+}
+.container .gamelist table,tr,td {
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.container .gamelist table {
+    width: 100%;
+}
+.container .gamelist th {
+    font-weight: normal;
 }
 .container .playerlist th {
     font-weight: normal;
@@ -40,11 +77,14 @@ body {
     margin: 3px;
     grid-area: gamelist;
     background-color: #5E503F;
+    background-image: url("../img/brown_planks_03_1k_jpg/brown_planks_03_diff_1k.jpg");
 }
 
 .container .chat {
     margin: 3px;
-
+    padding: 10px;
     grid-area: chat;
     background-color: #5E503F;
+    overflow: scroll;
+
 }
