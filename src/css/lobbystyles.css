@@ -1,0 +1,50 @@
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "playerlist gamelist" "playerlist chat";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 50% 25%;
+
+}
+
+.container .playerlist {
+    margin: 3px;
+    grid-area: playerlist;
+    background-color: #A9927D;
+    overflow: scroll;
+}
+.container .playerlist table,tr,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.container .playerlist th {
+    font-weight: normal;
+}
+
+.container .playerlist ul {
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+}
+
+.container .gamelist {
+    padding: 10px;
+    overflow: scroll;
+    margin: 3px;
+    grid-area: gamelist;
+    background-color: #5E503F;
+}
+
+.container .chat {
+    margin: 3px;
+
+    grid-area: chat;
+    background-color: #5E503F;
+}
