@@ -10,7 +10,11 @@ html {
     margin: 0px;
     padding: 0px;
 }
-
+@media only screen and (min-width: 2140px) {
+    body {
+        font-size: 2rem;
+    }
+}
 body {
     font-family: 'Roboto';
     text-shadow: 1px 1px 1px #49111C;
@@ -19,7 +23,6 @@ body {
     margin: 0px !important;
     padding: 0px;
     overflow: hidden;
-    font-size: 2rem;
     background-image: url("../img/brown_mud_dry_1k_jpg/brown_mud_dry_diff_1k.jpg");
     background-position-x: 0px;
 }
