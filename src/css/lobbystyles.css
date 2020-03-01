@@ -30,7 +30,7 @@ body {
     height: 100%;
     grid-template-areas: "playerlist gamelist" "playerlist chat";
     grid-template-columns: 25vw 75vw;
-    grid-template-rows: 50vh 25vh;
+    grid-template-rows: 75vh 25vh;
 }
 
 h1 {
@@ -70,6 +70,11 @@ td.closed {
 
 table tr:nth-child(2n+1) {
     background-color: rgba(255, 238, 170, 0.534);
+    margin: 0px;
+    padding: 0px;
+}
+table tr:nth-child(1) {
+    background-color: rgba(230, 230, 230, 0.726);
     margin: 0px;
     padding: 0px;
 }
