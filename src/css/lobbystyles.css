@@ -28,20 +28,22 @@ body {
 }
 
 .container {
+    grid-gap: 0px;
     width: 100%;
+    margin: 20px;
     display: grid;
     height: 100%;
     grid-template-areas: "playerlist gamelist" "playerlist chat";
-    grid-template-columns: 25vw 75vw;
-    grid-template-rows: 75vh 25vh;
+    grid-template-columns: 25vw 73vw;
+    grid-template-rows: 75vh 22vh;
 }
 
 h1 {
     margin: 0px;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     margin-bottom: 8px;
-    padding: 2px;
-    padding-left: 7px;
+    padding: 5px;
+    padding-left: 15px;
     background-color: #fff;
 }
 
@@ -49,6 +51,7 @@ td {
     border: none !important;
     margin: none !important;
     border-spacing: 0 0;
+    text-align: left;
 }
 
 td.busy {
@@ -87,6 +90,7 @@ table {
 }
 
 .container .playerlist {
+    border-radius: 10px;
     padding: 10px;
     margin: 3px;
     grid-area: playerlist;
@@ -104,15 +108,23 @@ table {
 }
 
 .container .playerlist th, tr, td {
-    padding: 5px;
-}
-
-.container .gamelist tr, td {
-    text-align: center;
+    text-align: left;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+.container .gamelist tr, td, th {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 
 .container .gamelist table {
     width: 100%;
@@ -139,6 +151,7 @@ table {
     background-color: #5E503F;
     background-image: url("../img/brown_planks_03_1k_jpg/brown_planks_03_diff_1k.jpg");
     background-position: cover;
+    border-radius: 10px;
 }
 
 .container .gamelist, .playerlist, .chat {
@@ -166,9 +179,10 @@ table {
     grid-template-areas: "chat-read" "chat-write";
     grid-auto-columns: 100%;
     overflow: hidden;
-    grid-auto-rows: auto 40px;
+    grid-auto-rows: auto 25%;
     background-color: #5E503F;
     background-image: url("../img/brown_planks_03_1k_jpg/brown_planks_03_diff_1k.jpg");
+    border-radius: 10px;
 }
 
 .container .chat .chat-read p {
@@ -180,23 +194,25 @@ table {
     background-color: rgba(255, 255, 255, 0.356);
     overflow: auto;
     margin: 3px;
-    padding: 10px;
+    padding: 25px;
+    padding-top:10px;
 }
 
 .container .chat .chat-write {
     margin: 0px;
     padding: 0px;
+    margin: 10px;
     grid-area: chat-write;
-    width: 100%;
-    height: 100%;
 }
 
 .container .chat .chat-write input {
+    border-radius: 10px;
     box-shadow: inset 0 0 5px #000000;
-    border: none;
-    padding-left: 15px;
-    margin: 0px;
+    padding: 2px;
+    padding-left: 20px;
     width: 100%;
-    height: 40px;
+    border: none;
+    margin: 0px;
+    height: 100%;
     font-size: 1.5rem;
 }

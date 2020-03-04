@@ -1,0 +1,1 @@
+basically add your sftp user to the group www-data and give www-data ownership and access to write files
