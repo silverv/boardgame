@@ -169,6 +169,7 @@
 .msg-own {
     color: lightblue;
     align-content: right;
+    text-align: left;
 }
 
 .msg::before {
