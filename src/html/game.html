@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/game.css">
+    <link rel="stylesheet" href="../css/lobbystyles.css">
     <title>Boardgame — Play</title>
-    <div class="jumbotron monitor">
-        <h1>Welcome to the Game!</h1>
-        
-    
-      </div>
-    <link rel="stylesheet" href="../css/styles.css">
+    <div class="container">
+        <div class="chat">
+            <h1 class="title">Mini Adventure Game</h1>
+            <div class="chat-read monitor">
+                <p class="msg">You're lost in the forest.</p>
+                <p class="msg">Which direction do you go?</p>
+                <p class="msg msg-own">go left</p>
+                <p class="msg">You go left and run into an orc!</p>
+            </div>
+            <form>
+                <fieldset class="form-group chat-write">
+                    <input type="text" class="form-control" placeholder="say something" id="inputDefault">
+                    <button type="submit" class="btn btn-primary">Enter</button>
+                <fieldset>
+            </form>
+        </div>
+    </div>
 </head>
 <body>
     
