@@ -15,9 +15,9 @@
     margin: 0;
     display: grid;
     height: 100%;
-    grid-template-areas: "playerlist gamelist" "playerlist chat";
+    grid-template-areas: "playerlist chat" "playerlist chat";
     grid-template-columns: 25vw 70vw;
-    grid-template-rows: 25vh 75vh;
+    grid-template-rows: 25vh 70vh;
 }
 
 
@@ -27,32 +27,17 @@
     margin-right: 40px;
     grid-area: playerlist;
     overflow: auto;
+    
 }
 
 .container .playerlist table {
     width: 100%;
-    border: none;
     padding: 0px;
     margin: 0px;
 }
 
 .container .playerlist th, tr, td {
     padding: 5px;
-}
-
-.container .gamelist tr, td {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-}
-
-.container .gamelist table {
-    width: 100%;
-}
-
-.container .gamelist th {
-    font-weight: normal;
 }
 
 .container .playerlist th {
@@ -65,24 +50,14 @@
     padding: 5px;
 }
 
-.container .gamelist {
-    padding: 10px;
-    margin: 3px;
-    grid-area: gamelist;
-}
-
-
-
-.container .gamelist table {
-    background-color: rgba(215, 250, 250, 0.7);
-}
-
 .container .chat {
     grid-area: chat;
     display: grid;
-    grid-template-areas: "chat-read" "chat-write";
+    grid-template-areas: "name" "chat-read" "chat-write";
     grid-auto-columns: 100%;
+    grid-template-rows: 118px auto 20%;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .container .chat .chat-read p {
@@ -92,7 +67,7 @@
 .container .chat .chat-read {
     grid-area: chat-read;
     overflow: auto;
-    margin: 3px;
+    margin: 0px;
     padding: 10px;
     
 }
@@ -110,9 +85,18 @@
     border: none;
     padding-left: 15px;
     margin: 0px;
-    width: 100%;
+    width: 91%;
     height: 40px;
     font-size: 1.5rem;
+}
+
+.btn {
+    height: 40px;
+    margin: 0;
+    margin-left: 10px;
+    float: right;
+    font-size: 1.5rem;
+    line-height: 0;
 }
 
 .monitor {
@@ -125,6 +109,7 @@
     text-shadow: 0 0 5px #C8C8C8;
     border: 1px solid skyblue;
     border-collapse: collapse;
+    display: flex;
     
   }
   ::selection {
@@ -136,13 +121,25 @@
   }
   .msg {
       color: lightpink;
-      float: left;
   }
   .msg-own {
       color: lightblue;
-      float:right;
+      align-content: right;
   }
 .msg::before {
     content: ">> ";
 }
 
+.form-group{
+    display: flex;
+}
+
+.name {
+    grid-area: name;
+}
+fieldset{
+    padding: 0;
+}
+form{
+    margin-top: 20px;
+}
