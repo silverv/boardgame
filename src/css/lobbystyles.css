@@ -1,99 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@charset "utf-8";
+@import url("styles.css");
 * {
     box-sizing: border-box;
 }
 
-html {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    margin: 0px;
-    padding: 0px;
-}
 @media only screen and (min-width: 2140px) {
     body {
         font-size: 2rem;
     }
 }
-body {
-    font-family: 'Roboto';
-    text-shadow: 1px 1px 1px #49111C;
-    width: 100%;
-    height: 100%;
-    margin: 0px !important;
-    padding: 0px;
-    overflow: hidden;
-    background-image: url("../img/brown_mud_dry_1k_jpg/brown_mud_dry_diff_1k.jpg");
-    background-position-x: 0px;
-}
 
 .container {
     width: 100%;
+    margin: 0;
     display: grid;
     height: 100%;
     grid-template-areas: "playerlist gamelist" "playerlist chat";
-    grid-template-columns: 25vw 75vw;
-    grid-template-rows: 75vh 25vh;
+    grid-template-columns: 25vw 70vw;
+    grid-template-rows: 25vh 75vh;
 }
 
-h1 {
-    margin: 0px;
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-    padding: 2px;
-    padding-left: 7px;
-    background-color: #fff;
-}
-
-td {
-    border: none !important;
-    margin: none !important;
-    border-spacing: 0 0;
-}
-
-td.busy {
-    color: red;
-}
-
-td.online {
-    color: green;
-}
-
-td.spectatable {
-    color: orange;
-}
-
-td.open {
-    color: green;
-}
-
-td.closed {
-    color: red;
-}
-
-table tr:nth-child(2n+1) {
-    background-color: rgba(255, 238, 170, 0.534);
-    margin: 0px;
-    padding: 0px;
-}
-table tr:nth-child(1) {
-    background-color: rgba(230, 230, 230, 0.726);
-    margin: 0px;
-    padding: 0px;
-}
-table {
-    border: none;
-    padding: 0px;
-}
 
 .container .playerlist {
     padding: 10px;
-    margin: 3px;
+    margin: 10px;
+    margin-right: 40px;
     grid-area: playerlist;
-    background-color: #A9927D;
     overflow: auto;
-    background-image: url("../img/brown_planks_05_1k_jpg/brown_planks_05_diff_1k.jpg");
-    background-position-x: 0px;
 }
 
 .container .playerlist table {
@@ -136,25 +69,9 @@ table {
     padding: 10px;
     margin: 3px;
     grid-area: gamelist;
-    background-color: #5E503F;
-    background-image: url("../img/brown_planks_03_1k_jpg/brown_planks_03_diff_1k.jpg");
-    background-position: cover;
 }
 
-.container .gamelist, .playerlist, .chat {
-    box-shadow: inset 0 0 10px #000000;
-    border: 1px solid black;
-    overflow: auto;
-}
 
-.gamelist:hover, .playerlist:hover, .chat:hover {
-    border: 1px solid green;
-    box-shadow: inset 0 0 10px green;
-}
-
-.container .playerlist table {
-    background-color: rgba(255, 255, 255, 0.7);
-}
 
 .container .gamelist table {
     background-color: rgba(215, 250, 250, 0.7);
@@ -166,9 +83,6 @@ table {
     grid-template-areas: "chat-read" "chat-write";
     grid-auto-columns: 100%;
     overflow: hidden;
-    grid-auto-rows: auto 40px;
-    background-color: #5E503F;
-    background-image: url("../img/brown_planks_03_1k_jpg/brown_planks_03_diff_1k.jpg");
 }
 
 .container .chat .chat-read p {
@@ -177,10 +91,10 @@ table {
 
 .container .chat .chat-read {
     grid-area: chat-read;
-    background-color: rgba(255, 255, 255, 0.356);
     overflow: auto;
     margin: 3px;
     padding: 10px;
+    
 }
 
 .container .chat .chat-write {
@@ -200,3 +114,35 @@ table {
     height: 40px;
     font-size: 1.5rem;
 }
+
+.monitor {
+    background-color: navy;
+    background-image: radial-gradient(
+      rgba(0, 0, 0, 0.75), black 120%
+    );
+    color: white;
+    font: 1rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    border: 1px solid skyblue;
+    border-collapse: collapse;
+    
+  }
+  ::selection {
+    background: #0080FF;
+    text-shadow: none;
+  }
+  .msg, .msg-own {
+      margin-top: 10px;
+  }
+  .msg {
+      color: lightpink;
+      float: left;
+  }
+  .msg-own {
+      color: lightblue;
+      float:right;
+  }
+.msg::before {
+    content: ">> ";
+}
+
