@@ -32,3 +32,15 @@ For Silver: add plants to planets
 # Private repository
 
 This repository has to remain private because we haven't had time to implement storing credentials embedded in a system and therefore will store it in code.
+
+# Storing images in TTÜ sftp
+here's the command to connect
+svaldv is my Taltech unid, replace it with yours.
+
+```bash
+sftp svaldv@sftp.ttu.ee
+```
+
+If you put files there, they will be published at 
+
+http://www.tud.ttu.ee/web/svaldv/
