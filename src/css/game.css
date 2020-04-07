@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import url("bootstrap.css");
+
+.monitor {
+    background-color: navy;
+    background-image: radial-gradient(
+      rgba(0, 0, 0, 0.75), black 120%
+    );
+    color: white;
+    font: 1rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    border: 1px solid skyblue;
+    border-collapse: collapse;
+    width: 80%;
+    height: 80%;
+    margin: 100px auto 0px;
+    
+  }
+  ::selection {
+    background: #0080FF;
+    text-shadow: none;
+  }
+  pre {
+    margin: 0;
+  }
+  
