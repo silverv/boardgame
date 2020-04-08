@@ -33,6 +33,23 @@ For Silver: add plants to planets
 
 Silver modified the php.ini file that was stored somewhere in etc. Now errors are logged in /home/ubuntu/phplogs. Very convenient! Please don't expose the logs to the public. They might reveal db passwords.
 
+# References to pages we need 
+
+https://www.php.net/manual/en/book.pgsql.php
+
+https://www.php.net/manual/en/pgsql.examples-basic.php
+
+https://www.php.net/manual/en/function.setcookie.php
+
+https://stackoverflow.com/questions/4818807/php-split-code-into-multiple-files-or-keep-it-in-as-few-files-as-possible
+
+https://httpd.apache.org/docs/2.4/urlmapping.html#page-header
+
+# References we need later
+https://github.com/nasirkhan/laravel-starter
+https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
+https://laravel.com/docs/5.0/installation
+
 # Private repository
 
 This repository has to remain private because we haven't had time to implement storing credentials embedded in a system and therefore will store it in code.
