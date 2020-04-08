@@ -1,4 +1,4 @@
-<p>Here's all the planets:</p>
+<p>Here's all the plants:</p>
 <?php
 $dbconn = pg_connect("host=13.53.41.225 dbname=silverphp user=silverphp password=5KXhj!zOw6sZ70IwTe@5")
     or die('Could not connect: ' . pg_last_error());
@@ -12,7 +12,7 @@ $query = 'SELECT * FROM public.planet';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planets</title>
+    <title>Plants</title>
 </head>
 
 <body>
@@ -31,5 +31,5 @@ $query = 'SELECT * FROM public.planet';
 </body>
 
 </html>
-<p>Planets end here</p>
-<a href="plants.php">Plants</a>
+<p>Plants end here</p>
+<a href="index.php">back</a>
