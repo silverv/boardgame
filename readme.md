@@ -29,6 +29,10 @@ For Roman: implement the part where you see what plants are on what planet.
 
 For Silver: add plants to planets
 
+# Where are php errors stored?
+
+Silver modified the php.ini file that was stored somewhere in etc. Now errors are logged in /home/ubuntu/phplogs. Very convenient! Please don't expose the logs to the public. They might reveal db passwords.
+
 # Private repository
 
 This repository has to remain private because we haven't had time to implement storing credentials embedded in a system and therefore will store it in code.
