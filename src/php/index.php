@@ -1,11 +1,16 @@
 <?php
+include_once ('header.php');
+?>
+<div class='container'>
 
-$var = "";
-// Show all information, defaults to INFO_ALL
-phpinfo();
+</div>
 
-// Show just the module information.
-// phpinfo(8) yields identical results.
-phpinfo(INFO_MODULES);
 
+
+
+
+
+
+<?php
+include_once ('footer.php');
 ?>
