@@ -117,27 +117,28 @@
             $this->hasWater = $hasWater;
         }
 
-        /**
-         * @return array
-         */
-        public function getPlanets()
-        {
-            return $this->planets;
-        }
-
-        /**
-         * @param array $planets
-         */
-        public function setPlanets($planets)
-        {
-            $this->planets = $planets;
-        }
 
         /**
          * @param Plant $plant
          */
-        public function addPlant(&$plant){
+        public function addPlant($plant){
             array_push($this->plants, $plant);
+        }
+
+        /**
+         * @return array
+         */
+        public function getPlants()
+        {
+            return $this->plants;
+        }
+
+        /**
+         * @param array $plants
+         */
+        public function setPlants($plants)
+        {
+            $this->plants = $plants;
         }
     }
 ?>

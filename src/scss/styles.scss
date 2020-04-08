@@ -1,7 +1,5 @@
 @charset "utf-8";
 @import "variables.scss";
-@import url("styles.css");
-
 * {
     box-sizing: border-box;
 }
@@ -22,7 +20,7 @@
     grid-template-rows: 25vh 75vh;
 }
 
-.container .playerlist {
+.container .plantlist {
     padding: 10px;
     margin: 10px;
     margin-right: 40px;
@@ -30,14 +28,14 @@
     overflow: auto;
 }
 
-.container .playerlist table {
+.container .plantlist table {
     width: 100%;
     border: none;
     padding: 0px;
     margin: 0px;
 }
 
-.container .playerlist th, tr, td {
+.container .plantlist th, tr, td {
     padding: 5px;
 }
 
@@ -56,11 +54,11 @@
     font-weight: normal;
 }
 
-.container .playerlist th {
+.container .plantlist th {
     font-weight: normal;
 }
 
-.container .playerlist ul {
+.container .plantlist ul {
     list-style: none;
     margin: 0px;
     padding: 5px;

@@ -1,26 +1,107 @@
 @charset "utf-8";
 @import url("bootstrap.css");
+@import url("styles.css");
+* {
+    box-sizing: border-box;
+}
 
-.monitor {
-    background-color: navy;
-    background-image: radial-gradient(
-      rgba(0, 0, 0, 0.75), black 120%
-    );
-    color: white;
-    font: 1rem Inconsolata, monospace;
-    text-shadow: 0 0 5px #C8C8C8;
-    border: 1px solid skyblue;
-    border-collapse: collapse;
-    width: 80%;
-    height: 80%;
-    margin: 100px auto 0px;
-    
-  }
-  ::selection {
+@media only screen and (min-width: 2140px) {
+    body {
+        font-size: 2rem;
+    }
+}
+
+.container {
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    display: grid;
+    height: 100%;
+    grid-template-areas: "plantlist" "planet-view";
+    grid-template-columns: 25vw 70vw;
+    grid-template-rows: 25vh 70vh;
+}
+
+.container .plantlist {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    margin-right: 40px;
+    grid-area: plantlist;
+    overflow: auto;
+}
+
+.container .plantlist table {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container .plantlist th, tr, td {
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container .plantlist th {
+    font-weight: normal;
+}
+
+.container .plantlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+}
+
+.container .planet-view {
+    grid-area: planet-view;
+    display: grid;
+    grid-template-areas: "name" "planet";
+    grid-auto-columns: 100%;
+    grid-template-rows: 118px auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+canvas #globe {
+    width: 500px;
+    height: 500px;
+}
+::selection {
     background: #0080FF;
     text-shadow: none;
-  }
-  pre {
+}
+
+
+.btn {
+    height: 40px;
     margin: 0;
-  }
-  
+    margin-left: 10px;
+    float: right;
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+::selection {
+    background: #0080FF;
+    text-shadow: none;
+}
+
+
+.form-group {
+    display: flex;
+}
+
+.name {
+    grid-area: name;
+}
+
+fieldset {
+    padding: 0;
+}
+
+form {
+    margin-top: 20px;
+}
