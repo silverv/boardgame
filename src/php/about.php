@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boardgame — Settings</title>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-
-<body>
+<?php
+include('header.php');
+?>
     <div class="jumbotron">
       <h1 class="display-3">About the universe centered plant gardening game</h1>
       <p class="lead">The main focus is on gardening but on different planets.</p>
@@ -18,6 +10,6 @@
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </p>
     </div>
-</body>
-
-</html>
+<?php
+include('footer.php');
+?>
