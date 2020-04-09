@@ -72,7 +72,7 @@
             $this->isPlanted = $isPlanted;
             $this->seeds = $seeds;
             $this->description='Lorem ipsum dolor sim amet';
-            $this->imageURL='../../img/brown_mud_dry_1k_jpg/brown_mud_dry_nor_1k.jpg';
+            $this->imageURL='../img/brown_mud_dry_1k_jpg/brown_mud_dry_nor_1k.jpg';
         }
         /**
          * @return string

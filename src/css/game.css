@@ -65,6 +65,9 @@
     overflow: hidden;
     margin-top: 20px;
 }
+.plant-detail .card {
+    margin-top: 40px;
+}
 canvas #globe {
     width: 500px;
     height: 500px;

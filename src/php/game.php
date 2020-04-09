@@ -63,15 +63,14 @@ function fillPlantInventory($plants){
                 </table>
             </div>
             <div class="plant-detail">
-                <div class="card mb-3">
-                    <h3 class="card-header"><?php echo $selectedPlant->getLatinName(); ?></h3>
+                <div class="card text-white bg-success mb-3 ">
+                    <h3 class="card-header"><?= $selectedPlant->getLatinName(); ?></h3>
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $selectedPlant->getName(); ?></h5>
-                        <h6 class="card-subtitle text-muted"><?php echo $selectedPlant->getDescription();?></h6>
+                        <h5 class="card-title"><?= $selectedPlant->getName(); ?></h5>
                     </div>
-                    <img style="height: 200px; width: 100%; display: block;" src= <?php echo $selectedPlant->getImageURL(); ?>alt="Plant image">
+                    <img style="height: 200px; width: 100%; display: block;" src= <?= $selectedPlant->getImageURL(); ?> alt="Plant image">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text"><?= $selectedPlant->getDescription();?></p>
                     </div>
                     <div class="card-footer text-muted">
                     </div>
