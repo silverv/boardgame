@@ -14,19 +14,6 @@ $currentPlanet->setHasVolcanicActivity(true);
 $currentPlanet->setType('terrestrial');
 $currentPlanet->setHasWater(true);
 $selectedPlant = $currentPlanet->getPlants()[1];
-function fillPlantInventory($plants){
-    $i = 0;
-    foreach ($plants as $plant){
-        $tableEntry = '<tr class="table-';
-        $tableEntry.=(($i % 2 === 0 ? 'primary">' : 'secodary">'));
-        $tableEntry.='<th scope="row"><span class="badge badge-pill badge-';
-        $planted = $plant->getIsPlanted() ? 'success>Planted">' : 'light>Dormant">';
-        $tableEntry.= $planted . '</span></th>';
-        $tableEntry.= '<td>' . $plant->getName() . '</td>' . '<td>' . $plant->getLatinName() . '</td>';
-        $tableEntry.= '<td><span class="badge badge-pill badge-info">' . $plant->getSeeds() . '</span></td></tr>';
-        echo $tableEntry;
-    }
-}
 ?>
     <div class="container">
         <div class="plant-info">
@@ -80,7 +67,7 @@ function fillPlantInventory($plants){
         <div class="planet-view">
             <h1 class="name"><?php echo $currentPlanet->getName(); ?></h1>
                 <div class='planet'>
-                    <canvas id='globe'></canvas>
+                    <canvas width='500px' height='500px' id='globe'></canvas>
                     <script type='text/javascript' src='../scripts/create_planet.js'></script>
                 </div>
             </div>
