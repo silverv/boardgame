@@ -56,7 +56,7 @@ $selectedPlant = $currentPlanet->plants[1];
             </table>
         </div>
         <div class="plant-detail">
-            <h3><?= $selectedPlant->latinName; ?></h3>
+            <span class="selected-plant"><?= $selectedPlant->latinName; ?></span>
             <div>
                 <p><?= $selectedPlant->name; ?></p>
             </div>
@@ -67,9 +67,9 @@ $selectedPlant = $currentPlanet->plants[1];
         </div>
     </div>
     <div class="planet-view">
-        <h1 class="name"><?php echo $currentPlanet->name; ?></h1>
+        <h1 class="planet-name"><?php echo $currentPlanet->name; ?></h1>
         <div class='planet'>
-            <canvas id='globe'></canvas>
+            <canvas width='500px' height='500px' id='globe'></canvas>
             <script type='text/javascript' src='http://d3js.org/d3.v3.min.js'></script>
             <script type='text/javascript' src='http://d3js.org/topojson.v1.min.js'></script>
             <script type='text/javascript' src='scripts/planetary/planetaryjs.js'></script>

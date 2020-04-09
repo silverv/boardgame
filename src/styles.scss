@@ -7,6 +7,9 @@ $nav-padding: 10px;
 p {
     line-height: 150%;
 }
+h1, h2, h3, h4, h5, h6, th {
+    font-weight: lighter;
+}
 html,
 body,
 head {
@@ -83,6 +86,9 @@ body {
         padding-right: $side;
         padding-top: 20px;
         width: calc;
+    }
+    .planet-name {
+        font-weight: lighter;
     }
     #globe {
         width: 100%;
