@@ -2,7 +2,7 @@ $nav-padding: 10px;
 // Basically all font weights open-sans offers
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 * {
-    font-family: "Open Sans", sans;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 p {
     line-height: 150%;
@@ -29,61 +29,41 @@ body {
     width: 100%;
     overflow: hidden;
 }
+@mixin sides($side) {
+    .container {
+        padding-left: $side;
+        padding-right: $side;
+    }
+    nav {
+        padding-left: $side;
+        padding-right: $side;
+    }
+    .container,
+    nav {
+        width: calc(100% - #{$side}* 2);
+    }
+}
 // The order of media queries does matter! Please don't change.
 @media (min-width: 200px) {
     $side: 2%;
-    .container {
-        padding-left: $side;
-        padding-right: $side;
-    }
-    nav {
-        padding-left: $side;
-        padding-right: $side;
-    }
-    .container,
-    nav {
-        width: calc(100% - #{$side}* 2);
-    }
+    @include sides($side);
 }
 @media (min-width: 640px) {
     $side: 5%;
-    .container {
-        padding-left: $side;
-        padding-right: $side;
-    }
-    nav {
-        padding-left: $side;
-        padding-right: $side;
-    }
-    .container,
-    nav {
-        width: calc(100% - #{$side}* 2);
-    }
+    @include sides($side);
 }
 @media (min-width: 1280px) {
     $side: 10%;
-    .container {
-        padding-left: $side;
-        padding-right: $side;
-    }
-    nav {
-        padding-left: $side;
-        padding-right: $side;
-    }
-    .container,
-    nav {
-        width: calc(100% - #{$side}* 2);
-    }
+    @include sides($side);
 }
 @media (min-width: 1920px) {
     $side: 15%;
+    @include sides($side);
     .container {
         display: grid;
         grid-template-rows: auto;
         grid-template-columns: 50% 25% 25%;
         grid-template-areas: "plant-info planet-view planet-info";
-        padding-left: $side;
-        padding-right: $side;
         padding-top: 20px;
         width: calc;
     }
@@ -102,18 +82,11 @@ body {
         margin-right: 40px;
     }
     .planet-info {
+        // align paragraph text with other headings
         margin-top: 21.4333px;
     }
     .plant-table {
         width: 100%;
-    }
-    nav {
-        padding-left: $side;
-        padding-right: $side;
-    }
-    .container,
-    nav {
-        width: calc(100% - #{$side}* 2);
     }
 }
 @media (min-width: 2560px) {
