@@ -1,17 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 * {
-  font-family: 'Open Sans', sans;
+  font-family: "Open Sans", sans;
 }
 
 p {
   line-height: 150%;
 }
 
-html, body, head {
+html,
+body,
+head {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  background-color: #e6e6e6;
 }
 
 body {
@@ -30,7 +33,6 @@ body {
   grid-area: container;
   width: 100%;
   overflow: hidden;
-  background-color: #e6e6e6;
 }
 
 @media (min-width: 200px) {
@@ -42,8 +44,9 @@ body {
     padding-left: 2%;
     padding-right: 2%;
   }
-  .container, nav {
-    width: calc(100% - 2%*2);
+  .container,
+  nav {
+    width: calc(100% - 2%* 2);
   }
 }
 
@@ -56,8 +59,9 @@ body {
     padding-left: 5%;
     padding-right: 5%;
   }
-  .container, nav {
-    width: calc(100% - 5%*2);
+  .container,
+  nav {
+    width: calc(100% - 5%* 2);
   }
 }
 
@@ -70,23 +74,57 @@ body {
     padding-left: 10%;
     padding-right: 10%;
   }
-  .container, nav {
-    width: calc(100% - 10%*2);
+  .container,
+  nav {
+    width: calc(100% - 10%* 2);
   }
 }
 
 @media (min-width: 1920px) {
   .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: 50% 25% 25%;
+        grid-template-columns: 50% 25% 25%;
+        grid-template-areas: "plant-info planet-view planet-info";
     padding-left: 15%;
     padding-right: 15%;
+    padding-top: 20px;
     width: calc;
+  }
+  #globe {
+    width: 100%;
+    height: auto;
+  }
+  .planet-view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .planet-info {
+    margin-top: 21.4333px;
+  }
+  .plant-table {
+    width: 100%;
   }
   nav {
     padding-left: 15%;
     padding-right: 15%;
   }
-  .container, nav {
-    width: calc(100% - 15%*2);
+  .container,
+  nav {
+    width: calc(100% - 15%* 2);
   }
 }
 
@@ -99,8 +137,9 @@ body {
     padding-left: 25%;
     padding-right: 25%;
   }
-  .container, nav {
-    width: calc(100% - 25%*2);
+  .container,
+  nav {
+    width: calc(100% - 25%* 2);
   }
 }
 
@@ -160,7 +199,10 @@ nav .links a {
   margin-left: 10px;
 }
 
-table, tr, th, td {
+table,
+tr,
+th,
+td {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 10px;
@@ -173,5 +215,17 @@ table, tr, th, td {
 
 th {
   letter-spacing: 1px;
+}
+
+.plant-info {
+  grid-area: plant-info;
+}
+
+.planet-view {
+  grid-area: planet-view;
+}
+
+.planet-info {
+  grid-area: planet-info;
 }
 /*# sourceMappingURL=styles.css.map */

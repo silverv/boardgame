@@ -1,20 +1,23 @@
 $nav-padding: 10px;
 // Basically all font weights open-sans offers
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-*{
-    font-family: 'Open Sans', sans;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+* {
+    font-family: "Open Sans", sans;
 }
 p {
     line-height: 150%;
 }
-html, body, head {
+html,
+body,
+head {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    background-color: #e6e6e6;
 }
 body {
     display: grid;
-    grid-template-rows:74px auto;
+    grid-template-rows: 74px auto;
     grid-template-columns: 100%;
     grid-template-areas: "nav" "container";
 }
@@ -22,7 +25,6 @@ body {
     grid-area: container;
     width: 100%;
     overflow: hidden;
-    background-color: #e6e6e6;
 }
 // The order of media queries does matter! Please don't change.
 @media (min-width: 200px) {
@@ -35,8 +37,9 @@ body {
         padding-left: $side;
         padding-right: $side;
     }
-    .container, nav {
-        width: calc(100% - #{$side}*2);
+    .container,
+    nav {
+        width: calc(100% - #{$side}* 2);
     }
 }
 @media (min-width: 640px) {
@@ -49,8 +52,9 @@ body {
         padding-left: $side;
         padding-right: $side;
     }
-    .container, nav {
-        width: calc(100% - #{$side}*2);
+    .container,
+    nav {
+        width: calc(100% - #{$side}* 2);
     }
 }
 @media (min-width: 1280px) {
@@ -63,23 +67,47 @@ body {
         padding-left: $side;
         padding-right: $side;
     }
-    .container, nav {
-        width: calc(100% - #{$side}*2);
+    .container,
+    nav {
+        width: calc(100% - #{$side}* 2);
     }
 }
 @media (min-width: 1920px) {
     $side: 15%;
     .container {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 50% 25% 25%;
+        grid-template-areas: "plant-info planet-view planet-info";
         padding-left: $side;
         padding-right: $side;
+        padding-top: 20px;
         width: calc;
+    }
+    #globe {
+        width: 100%;
+        height: auto;
+    }
+    .planet-view {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .planet-info {
+        margin-top: 21.4333px;
+    }
+    .plant-table {
+        width: 100%;
     }
     nav {
         padding-left: $side;
         padding-right: $side;
     }
-    .container, nav {
-        width: calc(100% - #{$side}*2);
+    .container,
+    nav {
+        width: calc(100% - #{$side}* 2);
     }
 }
 @media (min-width: 2560px) {
@@ -91,10 +119,10 @@ body {
     nav {
         padding-left: $side;
         padding-right: $side;
-        
     }
-    .container, nav {
-        width: calc(100% - #{$side}*2);
+    .container,
+    nav {
+        width: calc(100% - #{$side}* 2);
     }
 }
 nav {
@@ -115,7 +143,6 @@ nav {
         letter-spacing: 2px;
         padding: 10px 10px;
         font-weight: bold;
-        
     }
     & .links {
         display: flex;
@@ -129,20 +156,30 @@ nav {
             margin-left: 10px;
         }
     }
-    
 }
-table, tr, th, td {
+table,
+tr,
+th,
+td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 10px;
 }
 .plant-image {
-    width:200px;
+    width: 200px;
     height: auto;
 }
 th {
     letter-spacing: 1px;
 }
 td {
-    
+}
+.plant-info {
+    grid-area: plant-info;
+}
+.planet-view {
+    grid-area: planet-view;
+}
+.planet-info {
+    grid-area: planet-info;
 }

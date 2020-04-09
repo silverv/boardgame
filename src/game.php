@@ -69,14 +69,16 @@ $selectedPlant = $currentPlanet->plants[1];
     <div class="planet-view">
         <h1 class="name"><?php echo $currentPlanet->name; ?></h1>
         <div class='planet'>
-            <canvas width='500px' height='500px' id='globe'></canvas>
+            <canvas id='globe'></canvas>
             <script type='text/javascript' src='http://d3js.org/d3.v3.min.js'></script>
             <script type='text/javascript' src='http://d3js.org/topojson.v1.min.js'></script>
             <script type='text/javascript' src='scripts/planetary/planetaryjs.js'></script>
             <script type='text/javascript' src='scripts/create_planet.js'></script>
         </div>
     </div>
-
+    <div class="planet-info">
+        Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other evidence, Earth formed over 4.5 billion years ago. Earth's gravity interacts with other objects in space, especially the Sun and the Moon, which is Earth's only natural satellite. Earth orbits around the Sun in 365.256 solar days, a period known as an Earth sidereal year. During this time, Earth rotates about its axis 366.256 times, that is, a sidereal year has 366.256 sidereal days.
+    </div>
 </div>
 <?php
 include('footer.php');
