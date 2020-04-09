@@ -1,4 +1,37 @@
 $nav-padding: 10px;
+html, body, head {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #e6e6e6;
+}
+// The order of media queries does matter! Please don't change.
+@media (min-width: 1920px) {
+    $side: 15%;
+    .container {
+        padding-left: $side;
+        padding-right: $side;
+    }
+    nav {
+        padding-left: $side;
+        padding-right: $side;
+    }
+}
+@media (min-width: 2560px) {
+    $side: 25%;
+    .container {
+        padding-left: $side;
+        padding-right: $side;
+    }
+    nav {
+        padding-left: $side;
+        padding-right: $side;
+    }
+}
 nav {
     background-color: #dadada;
 
@@ -33,6 +66,10 @@ table, tr, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 10px;
+}
+.plant-image {
+    width:200px;
+    height: auto;
 }
 th {
     letter-spacing: 1px;

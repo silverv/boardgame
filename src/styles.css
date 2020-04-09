@@ -1,3 +1,38 @@
+html, body, head {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #e6e6e6;
+}
+
+@media (min-width: 1920px) {
+  .container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  nav {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .container {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  nav {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+
 nav {
   background-color: #dadada;
   display: -webkit-box;
@@ -50,6 +85,11 @@ table, tr, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 10px;
+}
+
+.plant-image {
+  width: 200px;
+  height: auto;
 }
 
 th {
