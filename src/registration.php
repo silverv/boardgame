@@ -25,7 +25,7 @@ include('header.php');
                         <input type="password" class="form-control" id="passwordRepeat" placeholder="Repeat your password">
                 </div>
                 <input type="hidden" name="submit" value="doesn'tmatter">
-                <input type="submit" name= class="btn btn-primary">Register</button>
+                <button type="submit" name='submit'>Register</button>
             </fieldset>
     </form>
 <?php

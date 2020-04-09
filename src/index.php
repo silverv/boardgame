@@ -1,7 +1,7 @@
 <?php
 include('header.php');
 ?>
-    <form class="form" action="game.php">
+    <form class="form" action="game.php" method="POST">
         <fieldset>
             <legend>Start a Game</legend>
             <div class="form-group">
