@@ -4,6 +4,40 @@
         private $latinName;
         private $isPlanted;
         private $seeds;
+        private $description;
+        private $imageURL;
+
+        /**
+         * @return string
+         */
+        public function getDescription()
+        {
+            return $this->description;
+        }
+
+        /**
+         * @param string $description
+         */
+        public function setDescription($description)
+        {
+            $this->description = $description;
+        }
+
+        /**
+         * @return string
+         */
+        public function getImageURL()
+        {
+            return $this->imageURL;
+        }
+
+        /**
+         * @param string $imageURL
+         */
+        public function setImageURL($imageURL)
+        {
+            $this->imageURL = $imageURL;
+        }
 
         /**
          * @return int
@@ -37,6 +71,8 @@
             $this->latinName = $latinName;
             $this->isPlanted = $isPlanted;
             $this->seeds = $seeds;
+            $this->description='Lorem ipsum dolor sim amet';
+            $this->imageURL='../../img/brown_mud_dry_1k_jpg/brown_mud_dry_nor_1k.jpg';
         }
         /**
          * @return string

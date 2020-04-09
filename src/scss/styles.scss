@@ -20,7 +20,7 @@
     grid-template-rows: 25vh 75vh;
 }
 
-.container .plantlist {
+.container .plant-info {
     padding: 10px;
     margin: 10px;
     margin-right: 40px;
@@ -28,14 +28,14 @@
     overflow: auto;
 }
 
-.container .plantlist table {
+.container .plant-info table {
     width: 100%;
     border: none;
     padding: 0px;
     margin: 0px;
 }
 
-.container .plantlist th, tr, td {
+.container .plant-info th, tr, td {
     padding: 5px;
 }
 
@@ -54,11 +54,11 @@
     font-weight: normal;
 }
 
-.container .plantlist th {
+.container .plant-info th {
     font-weight: normal;
 }
 
-.container .plantlist ul {
+.container .plant-info ul {
     list-style: none;
     margin: 0px;
     padding: 5px;

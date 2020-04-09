@@ -13,15 +13,15 @@ $currentPlanet->setClimate('Temperate');
 $currentPlanet->setHasVolcanicActivity(true);
 $currentPlanet->setType('terrestrial');
 $currentPlanet->setHasWater(true);
-
+$selectedPlant = $currentPlanet->getPlants()[1];
 function fillPlantInventory($plants){
     $i = 0;
     foreach ($plants as $plant){
-        $tableEntry = '';
-        $tableEntry.=(($i % 2 === 0 ? '<tr class="table-primary">' : '<tr class="table-secodary">'));
+        $tableEntry = '<tr class="table-';
+        $tableEntry.=(($i % 2 === 0 ? 'primary">' : 'secodary">'));
         $tableEntry.='<th scope="row"><span class="badge badge-pill badge-';
         $planted = $plant->getIsPlanted() ? 'success>Planted">' : 'light>Dormant">';
-        $tableEntry.=$planted . '</span></th>';
+        $tableEntry.= $planted . '</span></th>';
         $tableEntry.= '<td>' . $plant->getName() . '</td>' . '<td>' . $plant->getLatinName() . '</td>';
         $tableEntry.= '<td><span class="badge badge-pill badge-info">' . $plant->getSeeds() . '</span></td></tr>';
         echo $tableEntry;
@@ -29,25 +29,58 @@ function fillPlantInventory($plants){
 }
 ?>
     <div class="container">
-        <div class="plantlist">
-            <h1>Plant Inventory</h1>
-            <table class="talbe table-hover">
-                <thead>
-                <tr>
-                    <th scope="col">Status</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Latin Name</th>
-                    <th scope="col">Seeds</th>
-                </tr>
-                <thead>
-                <tbody>
-                    <?php fillPlantInventory($currentPlanet->getPlants()); ?>
-                </tbody>
-            </table>
+        <div class="plant-info">
+            <div class="plant-inventory">
+                <h1>Plant Inventory</h1>
+                <table class="talbe table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Status</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Latin Name</th>
+                        <th scope="col">Seeds</th>
+                    </tr>
+                    <thead>
+                    <tbody>
+                        <?php foreach( $currentPlanet->getPlants() as $key=>$plant): ?>
+                            <?= ($key % 2 === 0 ? '<tr class="table-primary">' : '<tr class="table-">'); ?>
+                                <th scope="row">
+                                    <?= ($plant->getIsPlanted() ? '<span class="badge badge-pill badge-success>Planted">' : '<span class="badge badge-pill badge-light>Dormant">')?>
+                                    </span>
+                                </th>
+                                <td>
+                                    <?= $plant->getName(); ?>
+                                </td>
+                                <td>
+                                    <?= $plant->getLatinName(); ?>
+                                </td>
+                                <td>
+                                    <span class="badge badge-pill badge-info"> <?= $plant->getSeeds(); ?> </span></td>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="plant-detail">
+                <div class="card mb-3">
+                    <h3 class="card-header"><?php echo $selectedPlant->getLatinName(); ?></h3>
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $selectedPlant->getName(); ?></h5>
+                        <h6 class="card-subtitle text-muted"><?php echo $selectedPlant->getDescription();?></h6>
+                    </div>
+                    <img style="height: 200px; width: 100%; display: block;" src= <?php echo $selectedPlant->getImageURL(); ?>alt="Plant image">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="planet-view">
             <h1 class="name"><?php echo $currentPlanet->getName(); ?></h1>
-                <div class='container, planet'>
+                <div class='planet'>
                     <canvas id='globe'></canvas>
                     <script type='text/javascript' src='../scripts/create_planet.js'></script>
                 </div>
