@@ -26,10 +26,12 @@ html, body, head {
     .container {
         padding-left: $side;
         padding-right: $side;
+        width: 50%;
     }
     nav {
         padding-left: $side;
         padding-right: $side;
+        width: 50%;
     }
 }
 nav {

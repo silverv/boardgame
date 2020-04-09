@@ -26,10 +26,12 @@ html, body, head {
   .container {
     padding-left: 25%;
     padding-right: 25%;
+    width: 50%;
   }
   nav {
     padding-left: 25%;
     padding-right: 25%;
+    width: 50%;
   }
 }
 
