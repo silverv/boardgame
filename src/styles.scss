@@ -1,0 +1,42 @@
+$nav-padding: 10px;
+nav {
+    background-color: #dadada;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap; // a shorthand for two previous lines
+
+    align-items: flex-end;
+
+    padding-top: $nav-padding;
+    padding-bottom: $nav-padding;
+    & span.badge {
+        display: flex;
+        letter-spacing: 2px;
+        padding: 10px 10px;
+        font-weight: bold;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+    }
+    & a {
+        display: flex;
+        text-decoration: none;
+        color: black;
+        padding: 15px 20px;
+        border: 1px solid #bbbbbb;
+        margin-left: 10px;
+    }
+}
+table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+th {
+    letter-spacing: 1px;
+}
+td {
+    
+}
