@@ -14,20 +14,79 @@ html, body, head {
   padding: 0px;
 }
 
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 74px auto;
+      grid-template-rows: 74px auto;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+      grid-template-areas: "nav" "container";
+}
+
 .container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: container;
   width: 100%;
   overflow: hidden;
   background-color: #e6e6e6;
+}
+
+@media (min-width: 200px) {
+  .container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  nav {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .container, nav {
+    width: calc(100% - 2%*2);
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  nav {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .container, nav {
+    width: calc(100% - 5%*2);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  nav {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .container, nav {
+    width: calc(100% - 10%*2);
+  }
 }
 
 @media (min-width: 1920px) {
   .container {
     padding-left: 15%;
     padding-right: 15%;
+    width: calc;
   }
   nav {
     padding-left: 15%;
     padding-right: 15%;
+  }
+  .container, nav {
+    width: calc(100% - 15%*2);
   }
 }
 
@@ -35,16 +94,20 @@ html, body, head {
   .container {
     padding-left: 25%;
     padding-right: 25%;
-    width: 50%;
   }
   nav {
     padding-left: 25%;
     padding-right: 25%;
-    width: 50%;
+  }
+  .container, nav {
+    width: calc(100% - 25%*2);
   }
 }
 
 nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nav;
   background-color: #dadada;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,9 +120,12 @@ nav {
       flex-wrap: wrap;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -71,17 +137,19 @@ nav span.badge {
   letter-spacing: 2px;
   padding: 10px 10px;
   font-weight: bold;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-nav a {
+nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+nav .links a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

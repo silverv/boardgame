@@ -12,14 +12,21 @@ html, body, head {
     margin: 0px;
     padding: 0px;
 }
+body {
+    display: grid;
+    grid-template-rows:74px auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "nav" "container";
+}
 .container {
+    grid-area: container;
     width: 100%;
     overflow: hidden;
     background-color: #e6e6e6;
 }
 // The order of media queries does matter! Please don't change.
-@media (min-width: 1920px) {
-    $side: 15%;
+@media (min-width: 200px) {
+    $side: 2%;
     .container {
         padding-left: $side;
         padding-right: $side;
@@ -27,6 +34,52 @@ html, body, head {
     nav {
         padding-left: $side;
         padding-right: $side;
+    }
+    .container, nav {
+        width: calc(100% - #{$side}*2);
+    }
+}
+@media (min-width: 640px) {
+    $side: 5%;
+    .container {
+        padding-left: $side;
+        padding-right: $side;
+    }
+    nav {
+        padding-left: $side;
+        padding-right: $side;
+    }
+    .container, nav {
+        width: calc(100% - #{$side}*2);
+    }
+}
+@media (min-width: 1280px) {
+    $side: 10%;
+    .container {
+        padding-left: $side;
+        padding-right: $side;
+    }
+    nav {
+        padding-left: $side;
+        padding-right: $side;
+    }
+    .container, nav {
+        width: calc(100% - #{$side}*2);
+    }
+}
+@media (min-width: 1920px) {
+    $side: 15%;
+    .container {
+        padding-left: $side;
+        padding-right: $side;
+        width: calc;
+    }
+    nav {
+        padding-left: $side;
+        padding-right: $side;
+    }
+    .container, nav {
+        width: calc(100% - #{$side}*2);
     }
 }
 @media (min-width: 2560px) {
@@ -34,15 +87,18 @@ html, body, head {
     .container {
         padding-left: $side;
         padding-right: $side;
-        width: 50%;
     }
     nav {
         padding-left: $side;
         padding-right: $side;
-        width: 50%;
+        
+    }
+    .container, nav {
+        width: calc(100% - #{$side}*2);
     }
 }
 nav {
+    grid-area: nav;
     background-color: #dadada;
 
     display: flex;
@@ -50,8 +106,8 @@ nav {
     flex-wrap: wrap;
     flex-flow: row wrap; // a shorthand for two previous lines
 
-    align-items: flex-end;
-
+    justify-content: space-between;
+    align-items: center;
     padding-top: $nav-padding;
     padding-bottom: $nav-padding;
     & span.badge {
@@ -59,18 +115,21 @@ nav {
         letter-spacing: 2px;
         padding: 10px 10px;
         font-weight: bold;
-        align-self: center;
-        align-items: center;
-        justify-content: center;
+        
     }
-    & a {
+    & .links {
         display: flex;
-        text-decoration: none;
-        color: black;
-        padding: 15px 20px;
-        border: 1px solid #bbbbbb;
-        margin-left: 10px;
+        flex-flow: row wrap;
+        & a {
+            display: flex;
+            text-decoration: none;
+            color: black;
+            padding: 15px 20px;
+            border: 1px solid #bbbbbb;
+            margin-left: 10px;
+        }
     }
+    
 }
 table, tr, th, td {
     border: 1px solid black;
