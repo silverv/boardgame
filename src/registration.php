@@ -1,12 +1,12 @@
 <?php
 include('header.php');
 ?>
-    <form>
+    <form action="game.php" method="POST">
             <fieldset>
                 <legend>Registration</legend>
                 <div class="form-group">
-                        <label class="col-form-label" for="name">Default input</label>
-                        <input type="text" class="form-control" placeholder="Your name" id="name">
+                        <label class="col-form-label" for="name">Username</label>
+                        <input type="text" class="form-control" placeholder="Enter a username" id="name" name="name">
                         <small id="nameHelp" class="form-text text-muted">Enter the name that will be displayed to all other players.</small>
                 </div>
                 <div class="form-group">
@@ -21,12 +21,20 @@ include('header.php');
                             1 lower case, 1 special character, and 1 digit.</small>
                 </div>
                 <div class="form-group">
-                        <label for="passwordRepeat">Password</label>
+                        <label for="passwordRepeat">Repeat your password</label>
                         <input type="password" class="form-control" id="passwordRepeat" placeholder="Repeat your password">
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <input type="hidden" name="submit" value="doesn'tmatter">
+                <input type="submit" name= class="btn btn-primary">Register</button>
             </fieldset>
     </form>
 <?php
 include('footer.php');
 ?>
+
+<?php
+
+?>
+
+
+
