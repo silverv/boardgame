@@ -1,9 +1,9 @@
 <?php
 // the following is how you can see errors on the page that has them in php
 // do not enable the following in production
-/* ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); */
+error_reporting(E_ALL);
 include('header.php');
 include('classes/planet.php');
 include('classes/plant.php');
