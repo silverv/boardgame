@@ -1,5 +1,5 @@
 <?php
-include('header.php');
+include('partial/header.php');
 ?>
     <form>
             <fieldset>
@@ -28,5 +28,5 @@ include('header.php');
             </fieldset>
     </form>
 <?php
-include('footer.php');
+include('partial/footer.php');
 ?>

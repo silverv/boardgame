@@ -4,7 +4,7 @@
 /* ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL); */
-include('header.php');
+include('partial/header.php');
 include('classes/planet.php');
 include('classes/plant.php');
 
@@ -81,5 +81,5 @@ $selectedPlant = $currentPlanet->plants[1];
     </div>
 </div>
 <?php
-include('footer.php');
+include('partial/footer.php');
 ?>
