@@ -1,0 +1,99 @@
+* {
+    font-family: 'DM Mono', monospace;
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.log {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: hidden;
+}
+
+.log-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.log-description {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.log-options {
+    display: flex;
+}
+
+.log-options > * {
+    padding: .5rem;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+    margin-right:.5rem;
+    transition: all 0.3s ease;
+}
+
+.log-options > *:hover {
+    background-color: #0d0d0d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar-user {
+    transition: all 0.3s ease;
+    padding: .5rem;
+    border-radius: 4px;
+}
+
+.navbar-user:hover {
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+.play-button {
+    padding: .5rem;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+    margin-right:.5rem;
+    transition: all 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #0d0d0d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.profile-form > input {
+    height: 1.5rem;
+    width: 100%;
+}
